@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#wrapper #video_wrapper {
+    max-width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    display: flex;
+}
+
+#wrapper #video_wrapper video {
+    height: 100%;
+    max-height: 25rem;
+    max-width: 100%;
+    margin: auto;
+    transition: all 0.5s;
+
+}
+
+#wrapper #foot {
+    background-image: url(./src/footer-bg-high.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex: 1 1 auto;
+    height: 0;
+    padding: 1rem;
+    transition: all 0.5s;
+    position: relative;
+
+}
+
+#wrapper #foot .inner-wrapper {
+    opacity: 0;
+    transform: scaleY(1);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: space-evenly;
+    transition: all 0.5s;
+    overflow: hidden;
+
+}
+
+#wrapper #foot .inner-wrapper .countdown {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#wrapper #foot .inner-wrapper .countdown div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#wrapper #foot .inner-wrapper .countdown div span {
+    background: white;
+    padding: 2rem 1rem;
+    min-width: 4rem;
+    text-align: center;
+    border-radius: 0.75rem;
+    font-size: 2rem;
+    color: black;
+    font-weight: normal;
+}
+
+#wrapper #foot .inner-wrapper .socials {
+    display: flex;
+    gap: 2rem;
+}
+
+#wrapper #foot .inner-wrapper .socials a {
+    text-decoration: none;
+}
+
+/* after video */
+#wrapper.end-video #video_wrapper {
+    height: 8rem;
+    transition: all 0.5s;
+}
+
+#wrapper.end-video #foot {
+    height: auto;
+    transition: all 0.5s;
+}
+
+#wrapper.end-video #foot .inner-wrapper {
+    opacity: 1;
+    transform: scaleY(1);
+    /* transition: all 0.5s; */
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-delay: 0.6s;
+
+}
+
+@media screen and (max-width: 600px) {
+    #wrapper #video_wrapper video{
+        max-height:12.5rem;
+    }
+    #wrapper #foot .inner-wrapper .countdown div {
+        gap: 0.25rem;
+        font-size: 1rem;
+    }
+
+    #wrapper #foot .inner-wrapper .countdown div span {
+        padding: 1rem 0.2rem;
+        min-width: 3rem;
+        font-size: 1.2rem;
+    }
+    #wrapper #foot .inner-wrapper .socials a img{
+        height:1.8rem;
+    }
+
+    #wrapper.end-video #video_wrapper {
+        height: 5rem;
+    }
+
+}
+@media screen and (max-width: 400px) {
+    #wrapper #foot .inner-wrapper .countdown div {
+        gap: 0.1rem;
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>dobles | wear your imagination</title>
+    <link rel="icon" type="image/x-icon" href="./src/favicon.ico">
+    <link rel="stylesheet" href="site.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="video_wrapper">
+            <video id="animation" autoplay muted>
+                <source src="src/animation-crop.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div id="foot">
+            <div class="inner-wrapper">
+                <div class="countdown">
+                    <div><span id="months"></span>months</div>
+                    <div><span id="days"></span>days</div>
+                    <div><span id="hours"></span>hours</div>
+                    <div><span id="minutes"></span>minutes</div>
+                    <div><span id="seconds"></span>seconds</div>
+                </div>
+                <div class="socials">
+                    <a href="https://www.instagram.com/dobles.app"><img src="./src/instagram.png"
+                            alt="dobles instagram"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100093847347081"><img src="./src/facebook.png"
+                            alt="dobles facebook"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countdown/2.6.0/countdown.min.js"
+        integrity="sha512-FkM4ZGExuYz4rILLbNzw8f3HxTN9EKdXrQYcYfdluxJBjRLthYPxxZixV/787qjN3JLs2607yN5XknR/cQMU8w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        //Animate on finish
+        let video = document.getElementById('animation');
+        let wrapper = document.getElementById('wrapper');
+
+        video.addEventListener('ended', videoEnd, false);
+
+        function videoEnd(e) {
+            console.log('end');
+            wrapper.classList.add("end-video");
+        }
+
+        // countdown
+        var interval = setInterval(function () {
+            if (countdown()) {
+                let timespan = countdown(new Date(2023, 8, 30)); //End september
+                document.getElementById("months").innerHTML = timespan.months;
+                document.getElementById("days").innerHTML = timespan.days;
+                document.getElementById("hours").innerHTML = timespan.hours;
+                document.getElementById("minutes").innerHTML = timespan.minutes;
+                document.getElementById("seconds").innerHTML = timespan.seconds;
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
