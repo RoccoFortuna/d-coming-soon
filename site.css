@@ -1,3 +1,9 @@
+#wrapper #foot .inner-wrapper .countdown h1 {
+    font-family: 'Jost', sans-serif;
+    /* Other styling properties */
+}
+
+
 body {
     margin: 0;
     font-family: sans-serif;
