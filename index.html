@@ -29,18 +29,43 @@
                     <div><span id="hours"></span>hours</div>
                     <div><span id="minutes"></span>minutes</div>
                     <div><span id="seconds"></span>seconds</div> -->
-                    <div><h1><b>march 2024</b></h1></div>
+                    <div><h1><b>subscribe to waiting list</b></h1></div>
                 </div>
+
+                <div id="hubspotForm"></div>
+
                 <div class="socials">
-                    <a href="https://www.instagram.com/dobles.app"><img src="./src/instagram.png"
+                    <a href="https://www.instagram.com/dobles.app"><img src="./src/instagram-icon.png"
                             alt="dobles instagram"></a>
-                    <a href="https://www.facebook.com/profile.php?id=100093847347081"><img src="./src/facebook.png"
-                            alt="dobles facebook"></a>
+                    <a href="https://discord.gg/hSavTmug"><img src="./src/discord-icon.png"
+                            alt="dobles discord"></a>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- hubspot script -->
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/139746862.js"></script>
+    <!-- End of HubSpot Embed Code -->
+    <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if(window.hbspt) {
+                // Create the form inside the specified container
+                hbspt.forms.create({
+                    region: "eu1",
+                    portalId: "139746862",
+                    formId: "b6b655f5-9763-4894-8523-347d3ab2d9b7",
+                    target: "#hubspotForm" // Target the container by its ID
+                });
+            } else {
+                console.error("HubSpot script not loaded properly.");
+            }
+        });
+    </script>
+
+    <!-- countdown -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countdown/2.6.0/countdown.min.js"
         integrity="sha512-FkM4ZGExuYz4rILLbNzw8f3HxTN9EKdXrQYcYfdluxJBjRLthYPxxZixV/787qjN3JLs2607yN5XknR/cQMU8w=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

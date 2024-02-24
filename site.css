@@ -148,3 +148,8 @@ body {
         gap: 0.1rem;
     }
 }
+
+img {
+    width: auto;
+    height: 40px;
+}
