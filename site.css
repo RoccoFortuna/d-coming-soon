@@ -15,7 +15,8 @@ body {
 }
 
 p {
-    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
     text-align: center;
 }
 
