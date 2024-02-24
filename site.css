@@ -9,7 +9,14 @@ h2 {
 
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Jost', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
 }
 
 #wrapper {
