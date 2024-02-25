@@ -9,13 +9,13 @@ h2 {
 
 body {
     margin: 0;
-    font-family: 'Jost', sans-serif;
+    font-family: 'Jost', sans-serif !important;
     color: white;
     text-align: center;
 }
 
 p {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Jost', sans-serif !important;
     font-size: 20px;
     text-align: center;
 }
